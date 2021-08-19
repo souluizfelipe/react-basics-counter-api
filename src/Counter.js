@@ -1,10 +1,15 @@
-import  React, { useState } from 'react';
+import  React, { useState,useEffect } from 'react';
 
 import './Counter.css';
 
 function Counter() {
 
   const [ counter, setCounter ] = useState(0);
+  const [ product, setProduct ] = useState({});
+
+  useEffect(() => {
+    console.log('bananas')
+  } ,[counter]);
 
   const handleOnClick = operator => {
     const newValue = operator === '+' 
@@ -19,6 +24,7 @@ function Counter() {
       <span>{counter}</span>
       <button onClick={() => handleOnClick('-')} >-</button>
       <button onClick={() => handleOnClick('+')} >+</button>
+
     </div>
   );
 
