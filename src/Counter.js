@@ -5,7 +5,6 @@ import './Counter.css';
 function Counter() {
 
   const [ counter, setCounter ] = useState(0);
-  const [ product, setProduct ] = useState({});
 
   useEffect(() => {
     console.log('bananas')
@@ -24,7 +23,6 @@ function Counter() {
       <span>{counter}</span>
       <button onClick={() => handleOnClick('-')} >-</button>
       <button onClick={() => handleOnClick('+')} >+</button>
-
     </div>
   );
 
