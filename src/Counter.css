@@ -1,0 +1,22 @@
+.counter {
+  width: 300px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.counter span {
+  font-size: 2rem;
+  margin: 0 auto 0.5rem;
+}
+
+.counter button {
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 16px;
+  background-color: darkgray;
+  margin: 0.5rem;
+  cursor: pointer;
+}
