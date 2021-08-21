@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import Header from './Header';
 import Loading from './Loading'
 
 const Brand = () => {
@@ -19,7 +20,7 @@ const Brand = () => {
     
     return(
       <>
-      <h1>Brands</h1>
+      <Header title="Brands" />
       <Loading isLoading={isLoading} />
       <ul>
         { 

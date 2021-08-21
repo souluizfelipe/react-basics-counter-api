@@ -1,6 +1,7 @@
 import  React, { useState, useEffect } from 'react';
 
 import './Counter.css';
+import Header from './Header';
 
 function Counter() {
 
@@ -19,11 +20,14 @@ function Counter() {
   };
 
   return(
-    <div className="counter">
-      <span>{counter}</span>
-      <button onClick={() => handleOnClick('-')} >-</button>
-      <button onClick={() => handleOnClick('+')} >+</button>
-    </div>
+    <>
+      <Header title="Counter" />
+      <div className="counter">
+        <span>{counter}</span>
+        <button onClick={() => handleOnClick('-')} >-</button>
+        <button onClick={() => handleOnClick('+')} >+</button>
+      </div>
+    </>
   );
 
 };
