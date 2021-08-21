@@ -2,15 +2,16 @@ import React from 'react'
 
 import './Loading.css'
 
-const Loading = () => {
+const Loading = ( {isLoading} ) => {
   return (
-    <div className="loading-page">
-      <p>Loading</p>
-      <span>.</span>
-      <span>.</span>
-      <span>.</span>
-      
-    </div>
+    isLoading === true
+    ? <div className="loading-page">
+        <p>Loading</p>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </div>
+    : ''
   )
 }
 

@@ -4,27 +4,23 @@ import Loading from './Loading'
 
 const Brand = () => {
 
-  const [ loading, setLoading ] = useState(false)
+  const [ isLoading, setIsLoading ] = useState(false)
   const [ brands, setBrands ] = useState([])
 
   useEffect(() => {
-    setLoading(true)
+    setIsLoading(true)
     fetch('http://localhost:8080/api/products')
       .then(res => res.json())
       .then(data => {
         setBrands(data)
-        setLoading(false)
+        setIsLoading(false)
       })
     }, [])
     
     return(
       <>
       <h1>Brands</h1>
-      {
-        loading === true 
-          ? <Loading />
-          : ''
-      }
+      <Loading isLoading={isLoading} />
       <ul>
         { 
           brands.map((name) => {
