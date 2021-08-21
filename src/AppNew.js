@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 
+import Template from './Template'
 import Brand from './Brand'
 import Counter from './Counter'
 import Products from './Products'
@@ -31,18 +32,10 @@ const AppNew = () => {
 
   const Page = pages[page].component
 
-  const pageList = Object.keys(pages)
-
   return (
-    <>
-      {
-        pageList.map((page) => 
-          <button onClick={() => handlePageChange(page)} >{pages[page].text}</button>
-        )
-      }
-
-      <Page />
-    </>
+    <Template pages={pages} onPageChange={handlePageChange} activePage={page} >
+      {Page && <Page />}
+    </Template>
   )
 }
 

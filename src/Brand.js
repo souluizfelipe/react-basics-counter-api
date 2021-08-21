@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import Template from './Template';
 import Loading from './Loading'
 
 const Brand = () => {
@@ -19,7 +18,7 @@ const Brand = () => {
     }, [])
     
     return(
-      <Template title="Brands" >
+      <>
       <Loading isLoading={isLoading} />
       <ul>
         { 
@@ -30,7 +29,7 @@ const Brand = () => {
           })
         }
       </ul>
-    </Template>
+    </>
   );
 };
 

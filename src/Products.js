@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 
-import Template from './Template'
 import Loading from './Loading'
 
 const Products = () => {
@@ -15,11 +14,10 @@ const Products = () => {
         setProducts(data)
         setIsLoading(false)
       })  
-  }, [] )
-  
+  }, [])
 
   return(
-    <Template title="Products">
+    <>
       <Loading isLoading={isLoading}/>
       <ul>
         {
@@ -30,7 +28,7 @@ const Products = () => {
           })
         }
       </ul>
-    </Template>
+    </>
   )
 }
 
