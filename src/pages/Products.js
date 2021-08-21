@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import Loading from './Loading'
+import Loading from '../components/Loading'
 
 const Products = () => {
   const [ isLoading, setIsLoading ] = useState(false)

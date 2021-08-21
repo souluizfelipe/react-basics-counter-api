@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
-import Template from './Template'
-import Brand from './Brand'
-import Counter from './Counter'
-import Products from './Products'
+import Template from './template/Template'
+import Brand from './pages/Brand'
+import Counter from './pages/Counter'
+import Products from './pages/Products'
 
 const defaultPage = 'albums'
 
