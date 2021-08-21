@@ -1,27 +1,27 @@
 import React, {useState} from 'react'
 
-import Albums from './Albums'
+import Brand from './Brand'
 import Counter from './Counter'
-import Users from './Users'
+import Products from './Products'
 
 const defaultPage = 'albums'
 
 const pages = {
   albums: {
-    text: "Albums",
-    component: Albums,
+    text: "Brand",
+    component: Brand,
   },
   counter: {
-    text: "counter",
+    text: "Counter",
     component: Counter,
   },
-  users: {
-    text: "users",
-    component: Users,
+  products: {
+    text: "Products",
+    component: Products,
   },
 }
 
-const App_ = () => {
+const AppNew = () => {
 
   const [ page, setPages ] = useState(defaultPage)
 
@@ -46,4 +46,4 @@ const App_ = () => {
   )
 }
 
-export default App_
+export default AppNew
