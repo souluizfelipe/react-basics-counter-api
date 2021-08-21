@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import Header from './Header'
+import Template from './Template'
 import Loading from './Loading'
 
 const Products = () => {
@@ -19,8 +19,7 @@ const Products = () => {
   
 
   return(
-    <>
-      <Header title="Products" />
+    <Template title="Products">
       <Loading isLoading={isLoading}/>
       <ul>
         {
@@ -31,7 +30,7 @@ const Products = () => {
           })
         }
       </ul>
-    </>
+    </Template>
   )
 }
 
