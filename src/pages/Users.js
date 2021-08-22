@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event'
 import React, { useEffect, useState } from 'react'
 
 import Loading from '../components/Loading'
