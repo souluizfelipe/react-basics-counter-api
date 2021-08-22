@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import Template from './template/Template'
 import Albums from './pages/Albums'
 import Counter from './pages/Counter'
-import Products from './pages/Products'
+import Users from './pages/Users'
 
 const defaultPage = 'albums'
 
@@ -16,9 +16,9 @@ const pages = {
     text: "Counter",
     component: Counter,
   },
-  products: {
-    text: "Products",
-    component: Products,
+  Users: {
+    text: "Users",
+    component: Users,
   },
 }
 

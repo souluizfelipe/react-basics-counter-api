@@ -1,17 +1,18 @@
+import userEvent from '@testing-library/user-event'
 import React, { useEffect, useState } from 'react'
 
 import Loading from '../components/Loading'
 
-const Products = () => {
+const Users = () => {
   const [ isLoading, setIsLoading ] = useState(false)
-  const [ products, setProducts ] = useState([])
+  const [ users, setUsers ] = useState([])
 
   useEffect(() => {
     setIsLoading(true)
-    fetch('http://localhost:8080/api/products')
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
       .then(data =>{
-        setProducts(data)
+        setUsers(data)
         setIsLoading(false)
       })  
   }, [])
@@ -21,9 +22,9 @@ const Products = () => {
       <Loading isLoading={isLoading}/>
       <ul>
         {
-          products.map((product) => {
+          users.map((user) => {
             return(
-              <li>{product.name} - {product.brand} - {product.price} </li>
+              <li>{user.name} - {user.email}</li>
             )
           })
         }
@@ -32,4 +33,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default Users
