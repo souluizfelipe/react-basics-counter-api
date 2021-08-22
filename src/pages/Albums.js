@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react';
 
 import Loading from '../components/Loading'
 
-const Brand = () => {
+const Albums = () => {
 
   const [ isLoading, setIsLoading ] = useState(false)
-  const [ brands, setBrands ] = useState([])
+  const [ albums, setAlbums ] = useState([])
 
   useEffect(() => {
     setIsLoading(true)
-    fetch('http://localhost:8080/api/products')
+    fetch('https://jsonplaceholder.typicode.com/albums')
       .then(res => res.json())
       .then(data => {
-        setBrands(data)
+        setAlbums(data)
         setIsLoading(false)
       })
     }, [])
@@ -22,9 +22,9 @@ const Brand = () => {
       <Loading isLoading={isLoading} />
       <ul>
         { 
-          brands.map((name) => {
+          albums.map((album) => {
             return (
-              <li>{name.brand}</li>
+              <li>{album.title}</li>
             )
           })
         }
@@ -33,4 +33,4 @@ const Brand = () => {
   );
 };
 
-export default Brand;
+export default Albums;

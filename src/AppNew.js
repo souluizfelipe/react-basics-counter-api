@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 import Template from './template/Template'
-import Brand from './pages/Brand'
+import Albums from './pages/Albums'
 import Counter from './pages/Counter'
 import Products from './pages/Products'
 
@@ -9,8 +9,8 @@ const defaultPage = 'albums'
 
 const pages = {
   albums: {
-    text: "Brand",
-    component: Brand,
+    text: "Albums",
+    component: Albums,
   },
   counter: {
     text: "Counter",
